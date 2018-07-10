@@ -38,6 +38,7 @@
 		440FBB2B20F476EB000EE3D2 = {
 			isa = PBXGroup;
 			children = (
+				440FBB4920F47704000EE3D2 /* start */,
 				440FBB3620F476EB000EE3D2 /* SharedCode */,
 				440FBB3520F476EB000EE3D2 /* Products */,
 			);
@@ -54,14 +55,21 @@
 		440FBB3620F476EB000EE3D2 /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
-				440FBB3720F476EB000EE3D2 /* AppDelegate.swift */,
+			);
+			path = SharedCode;
+			sourceTree = "<group>";
+		};
+		440FBB4920F47704000EE3D2 /* start */ = {
+			isa = PBXGroup;
+			children = (
 				440FBB3920F476EB000EE3D2 /* ViewController.swift */,
-				440FBB3B20F476EB000EE3D2 /* Main.storyboard */,
 				440FBB3E20F476EE000EE3D2 /* Assets.xcassets */,
 				440FBB4020F476EE000EE3D2 /* LaunchScreen.storyboard */,
 				440FBB4320F476EE000EE3D2 /* Info.plist */,
+				440FBB3B20F476EB000EE3D2 /* Main.storyboard */,
+				440FBB3720F476EB000EE3D2 /* AppDelegate.swift */,
 			);
-			path = SharedCode;
+			path = start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWLNFPCE6H;
-				INFOPLIST_FILE = SharedCode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/start/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWLNFPCE6H;
-				INFOPLIST_FILE = SharedCode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/start/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
