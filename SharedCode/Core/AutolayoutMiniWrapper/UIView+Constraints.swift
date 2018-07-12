@@ -6,12 +6,12 @@
 //
 import UIKit
 
-typealias Constraint = (_ layoutView: UIView) -> NSLayoutConstraint
+public typealias Constraint = (_ layoutView: UIView) -> NSLayoutConstraint
 
 //
 // Solution based on http://chris.eidhof.nl/post/micro-autolayout-dsl/
 //
-extension UIView {
+public extension UIView {
     
     /// Adds constraints using NSLayoutAnchors, based on description provided in params.
     /// Please refer to helper equal funtions for info how to generate constraints easily.
@@ -34,7 +34,7 @@ extension UIView {
 ///   - view: that constrain should relate to
 ///   - to: constraints key path
 /// - Returns: created constraint
-func equal<Anchor, Axis>(_ view: UIView, _ to: KeyPath<UIView, Anchor>) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+public func equal<Anchor, Axis>(_ view: UIView, _ to: KeyPath<UIView, Anchor>) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
     return { layoutView in
         layoutView[keyPath: to].constraint(equalTo: view[keyPath: to])
     }
@@ -48,7 +48,7 @@ func equal<Anchor, Axis>(_ view: UIView, _ to: KeyPath<UIView, Anchor>) -> Const
 ///   - keyPath: constraint key path
 ///   - constant: value
 /// - Returns: created constraint
-func equal<LayoutDimension>(_ keyPath: KeyPath<UIView, LayoutDimension>, to constant: CGFloat) -> Constraint where LayoutDimension: NSLayoutDimension {
+public func equal<LayoutDimension>(_ keyPath: KeyPath<UIView, LayoutDimension>, to constant: CGFloat) -> Constraint where LayoutDimension: NSLayoutDimension {
     return { layoutView in
         layoutView[keyPath: keyPath].constraint(equalToConstant: constant)
     }
@@ -65,7 +65,7 @@ func equal<LayoutDimension>(_ keyPath: KeyPath<UIView, LayoutDimension>, to cons
 ///   - to: constraint key path of related view
 ///   - constant: value
 /// - Returns: created constraint
-func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+public func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
     return { layoutView in
         layoutView[keyPath: from].constraint(equalTo: view[keyPath: to], constant: constant)
     }
@@ -81,7 +81,7 @@ func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: 
 ///   - to: constraint key path of related view
 ///   - constant: value
 /// - Returns: created constraint
-func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, lessOrEqual: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+public func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, lessOrEqual: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
     return { layoutView in
         layoutView[keyPath: from].constraint(lessThanOrEqualTo: view[keyPath: to], constant: lessOrEqual)
     }
@@ -97,7 +97,7 @@ func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: 
 ///   - to: constraint key path of related view
 ///   - constant: value
 /// - Returns: created constraint
-func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, greaterOrEqual: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+public func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: KeyPath<UIView, Anchor>, greaterOrEqual: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
     return { layoutView in
         layoutView[keyPath: from].constraint(greaterThanOrEqualTo: view[keyPath: to], constant: greaterOrEqual)
     }
@@ -112,7 +112,7 @@ func equal<Anchor, Axis>(_ view: UIView, _ from: KeyPath<UIView, Anchor>, _ to: 
 ///   - keyPath: constraint key path
 ///   - constant: value
 /// - Returns: created constraint
-func equal<Axis, Anchor>(_ view: UIView, _ keyPath: KeyPath<UIView, Anchor>, constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
+public func equal<Axis, Anchor>(_ view: UIView, _ keyPath: KeyPath<UIView, Anchor>, constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutAnchor<Axis> {
     return equal(view, keyPath, keyPath, constant: constant)
 }
 
@@ -125,7 +125,7 @@ func equal<Axis, Anchor>(_ view: UIView, _ keyPath: KeyPath<UIView, Anchor>, con
 /// - Returns: Array of `Constraint`.
 /// - Warning: This method uses force-unwrap on view's superview!
 /// - Warning: Pins top and bottom edges to `safeAreaLayoutGuide`!
-func equalToSuperview(with insets: UIEdgeInsets = .zero) -> [Constraint] {
+public func equalToSuperview(with insets: UIEdgeInsets = .zero) -> [Constraint] {
     
     let top: Constraint
     let bottom: Constraint

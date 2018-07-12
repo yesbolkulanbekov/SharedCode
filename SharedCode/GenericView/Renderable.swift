@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Renderable {
+public protocol Renderable {
     associatedtype Properties
     associatedtype ViewType
     func render(with props: Properties)

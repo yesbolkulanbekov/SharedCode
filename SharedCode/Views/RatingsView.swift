@@ -58,7 +58,7 @@ extension RatingsView {
         
         for _ in 0..<starCount {
             let imageView = UIImageView()
-            imageView.image = UIImage(assID: .tourCell_emptyStar)
+            imageView.image = UIImage(named: "PROVIDE_EMPTY_STAR_IMAGE")
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
             imageView.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
@@ -69,7 +69,7 @@ extension RatingsView {
     
     private func updateRatingView() {
         for index in 0..<rating {
-            ratingImages[index].image = UIImage(assID: .tourCell_filledStar)
+            ratingImages[index].image = UIImage(named: "PROVIDE_FULL_STAR_IMAGE")
         }
     }
     

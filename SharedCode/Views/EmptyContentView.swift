@@ -62,7 +62,7 @@ extension EmptyContentView: Renderable {
     }
     
     func layout(in mainView: EmptyContentView) {
-        EmptyContentViewLayout(mainView: mainView, contents: subs).paint()
+        EmptyContentViewLayout(mainView: mainView, subViews: subs).paint()
     }
     
 }
@@ -71,14 +71,14 @@ extension EmptyContentView: Renderable {
 
 struct EmptyContentViewLayout: UIViewLayout {
     var mainView: EmptyContentView
-    var contents: EmptyContentView.Subs
+    var subViews: EmptyContentView.Subs
     
     func addSubViews() {
-        mainView.addSubview(contents.emtyContentWarningLabel)
+        mainView.addSubview(subViews.emtyContentWarningLabel)
     }
     
     func addConstraints() {
-        contents.emtyContentWarningLabel.anchor(top: mainView.topAnchor,
+        subViews.emtyContentWarningLabel.anchor(top: mainView.topAnchor,
                                                 leading: mainView.leadingAnchor,
                                                 trailing: mainView.trailingAnchor,
                                                 padding: UIEdgeInsets(top: 70, left: 30, bottom: 0, right: 30))

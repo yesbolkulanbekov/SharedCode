@@ -12,9 +12,7 @@
 		440FBB3D20F476EB000EE3D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440FBB3B20F476EB000EE3D2 /* Main.storyboard */; };
 		440FBB3F20F476EE000EE3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440FBB3E20F476EE000EE3D2 /* Assets.xcassets */; };
 		440FBB4220F476EE000EE3D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440FBB4020F476EE000EE3D2 /* LaunchScreen.storyboard */; };
-		440FBB6B20F477C9000EE3D2 /* UIViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4B20F477C8000EE3D2 /* UIViewLayout.swift */; };
 		440FBB6C20F477C9000EE3D2 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4C20F477C8000EE3D2 /* LoadingDelegate.swift */; };
-		440FBB6D20F477C9000EE3D2 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4D20F477C8000EE3D2 /* Renderable.swift */; };
 		440FBB6E20F477C9000EE3D2 /* DidFailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4E20F477C8000EE3D2 /* DidFailable.swift */; };
 		440FBB6F20F477C9000EE3D2 /* HasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4F20F477C8000EE3D2 /* HasViewController.swift */; };
 		440FBB7020F477C9000EE3D2 /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5020F477C8000EE3D2 /* Popable.swift */; };
@@ -25,7 +23,6 @@
 		440FBB7520F477C9000EE3D2 /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5720F477C9000EE3D2 /* ButtonWithImage.swift */; };
 		440FBB7620F477C9000EE3D2 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5820F477C9000EE3D2 /* Alerts.swift */; };
 		440FBB7720F477C9000EE3D2 /* MonsterStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5920F477C9000EE3D2 /* MonsterStepper.swift */; };
-		440FBB7820F477C9000EE3D2 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5A20F477C9000EE3D2 /* GenericView.swift */; };
 		440FBB7920F477C9000EE3D2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5C20F477C9000EE3D2 /* Command.swift */; };
 		440FBB7A20F477C9000EE3D2 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5E20F477C9000EE3D2 /* UITextViewPlaceholder.swift */; };
 		440FBB7B20F477C9000EE3D2 /* UIView+bottomEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5F20F477C9000EE3D2 /* UIView+bottomEdgeView.swift */; };
@@ -38,9 +35,12 @@
 		440FBB8220F477C9000EE3D2 /* String+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6620F477C9000EE3D2 /* String+Components.swift */; };
 		440FBB8320F477C9000EE3D2 /* UIStackView+createBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */; };
 		440FBB8420F477C9000EE3D2 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
-		440FBB8520F477C9000EE3D2 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6920F477C9000EE3D2 /* UIKit+StyleInits.swift */; };
 		440FBB8620F477C9000EE3D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
 		44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
+		44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
+		44B5FA0320F5CB5E000DA324 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */; };
+		44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0020F5CB5E000DA324 /* Renderable.swift */; };
+		44B5FA0520F5CB5E000DA324 /* UIViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +51,7 @@
 		440FBB3E20F476EE000EE3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		440FBB4120F476EE000EE3D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		440FBB4320F476EE000EE3D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		440FBB4B20F477C8000EE3D2 /* UIViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLayout.swift; sourceTree = "<group>"; };
 		440FBB4C20F477C8000EE3D2 /* LoadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
-		440FBB4D20F477C8000EE3D2 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		440FBB4E20F477C8000EE3D2 /* DidFailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidFailable.swift; sourceTree = "<group>"; };
 		440FBB4F20F477C8000EE3D2 /* HasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasViewController.swift; sourceTree = "<group>"; };
 		440FBB5020F477C8000EE3D2 /* Popable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popable.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		440FBB5720F477C9000EE3D2 /* ButtonWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
 		440FBB5820F477C9000EE3D2 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		440FBB5920F477C9000EE3D2 /* MonsterStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterStepper.swift; sourceTree = "<group>"; };
-		440FBB5A20F477C9000EE3D2 /* GenericView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
 		440FBB5C20F477C9000EE3D2 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		440FBB5E20F477C9000EE3D2 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		440FBB5F20F477C9000EE3D2 /* UIView+bottomEdgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+bottomEdgeView.swift"; sourceTree = "<group>"; };
@@ -77,9 +74,12 @@
 		440FBB6620F477C9000EE3D2 /* String+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Components.swift"; sourceTree = "<group>"; };
 		440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+createBorder.swift"; sourceTree = "<group>"; };
 		440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchorViews.swift"; sourceTree = "<group>"; };
-		440FBB6920F477C9000EE3D2 /* UIKit+StyleInits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+StyleInits.swift"; sourceTree = "<group>"; };
 		440FBB6A20F477C9000EE3D2 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		44B5F9FE20F5CB5E000DA324 /* GenericView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
+		44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+StyleInits.swift"; sourceTree = "<group>"; };
+		44B5FA0020F5CB5E000DA324 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +113,7 @@
 		440FBB3620F476EB000EE3D2 /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				44B5F9E320F5BCC3000DA324 /* GenericView */,
 				440FBB5B20F477C9000EE3D2 /* Core */,
 				440FBB5220F477C9000EE3D2 /* Helpers */,
 				440FBB4A20F477C8000EE3D2 /* Protocols */,
@@ -137,12 +138,10 @@
 		440FBB4A20F477C8000EE3D2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				440FBB4B20F477C8000EE3D2 /* UIViewLayout.swift */,
 				440FBB4C20F477C8000EE3D2 /* LoadingDelegate.swift */,
-				440FBB4D20F477C8000EE3D2 /* Renderable.swift */,
 				440FBB4E20F477C8000EE3D2 /* DidFailable.swift */,
-				440FBB4F20F477C8000EE3D2 /* HasViewController.swift */,
 				440FBB5020F477C8000EE3D2 /* Popable.swift */,
+				440FBB4F20F477C8000EE3D2 /* HasViewController.swift */,
 				440FBB5120F477C8000EE3D2 /* DisplaysAlert.swift */,
 			);
 			path = Protocols;
@@ -164,7 +163,6 @@
 				440FBB5720F477C9000EE3D2 /* ButtonWithImage.swift */,
 				440FBB5820F477C9000EE3D2 /* Alerts.swift */,
 				440FBB5920F477C9000EE3D2 /* MonsterStepper.swift */,
-				440FBB5A20F477C9000EE3D2 /* GenericView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,7 +191,6 @@
 				440FBB6520F477C9000EE3D2 /* UIEdgeInsets+Inits.swift */,
 				440FBB6620F477C9000EE3D2 /* String+Components.swift */,
 				440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */,
-				440FBB6920F477C9000EE3D2 /* UIKit+StyleInits.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +202,17 @@
 				44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */,
 			);
 			path = AutolayoutMiniWrapper;
+			sourceTree = "<group>";
+		};
+		44B5F9E320F5BCC3000DA324 /* GenericView */ = {
+			isa = PBXGroup;
+			children = (
+				44B5F9FE20F5CB5E000DA324 /* GenericView.swift */,
+				44B5FA0020F5CB5E000DA324 /* Renderable.swift */,
+				44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */,
+				44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */,
+			);
+			path = GenericView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,15 +288,16 @@
 			files = (
 				440FBB7920F477C9000EE3D2 /* Command.swift in Sources */,
 				440FBB7120F477C9000EE3D2 /* DisplaysAlert.swift in Sources */,
+				44B5FA0320F5CB5E000DA324 /* UIKit+StyleInits.swift in Sources */,
 				440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */,
 				440FBB7A20F477C9000EE3D2 /* UITextViewPlaceholder.swift in Sources */,
+				44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */,
 				440FBB7420F477C9000EE3D2 /* EmptyContentView.swift in Sources */,
 				440FBB6E20F477C9000EE3D2 /* DidFailable.swift in Sources */,
 				440FBB7C20F477C9000EE3D2 /* UIStackView+addArrSubViews.swift in Sources */,
-				440FBB7820F477C9000EE3D2 /* GenericView.swift in Sources */,
+				44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */,
 				440FBB7B20F477C9000EE3D2 /* UIView+bottomEdgeView.swift in Sources */,
 				440FBB7D20F477C9000EE3D2 /* UIColor+hexString.swift in Sources */,
-				440FBB8520F477C9000EE3D2 /* UIKit+StyleInits.swift in Sources */,
 				440FBB6C20F477C9000EE3D2 /* LoadingDelegate.swift in Sources */,
 				440FBB7020F477C9000EE3D2 /* Popable.swift in Sources */,
 				440FBB3820F476EB000EE3D2 /* AppDelegate.swift in Sources */,
@@ -302,8 +311,7 @@
 				440FBB8120F477C9000EE3D2 /* UIEdgeInsets+Inits.swift in Sources */,
 				440FBB8420F477C9000EE3D2 /* UIView+anchorViews.swift in Sources */,
 				440FBB7520F477C9000EE3D2 /* ButtonWithImage.swift in Sources */,
-				440FBB6D20F477C9000EE3D2 /* Renderable.swift in Sources */,
-				440FBB6B20F477C9000EE3D2 /* UIViewLayout.swift in Sources */,
+				44B5FA0520F5CB5E000DA324 /* UIViewLayout.swift in Sources */,
 				440FBB7620F477C9000EE3D2 /* Alerts.swift in Sources */,
 				440FBB7220F477C9000EE3D2 /* PhoneFormatter.swift in Sources */,
 				440FBB8220F477C9000EE3D2 /* String+Components.swift in Sources */,

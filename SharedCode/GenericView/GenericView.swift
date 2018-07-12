@@ -4,7 +4,7 @@ import UIKit
 
 class GenericView: UIView {
 
-    let subs = GenericView.Subs()
+    let subViews = GenericView.Subviews()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,12 +34,12 @@ extension GenericView.Props {
 /// View configuration, content and styling
 
 extension GenericView: Renderable {
-    struct Subs {
+    struct Subviews {
 
     }
     
     func setup() {
-        Layout.falseMask(self)
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func render(with props: GenericView.Props) {
@@ -47,7 +47,7 @@ extension GenericView: Renderable {
     }
     
     func layout(in mainView: GenericView) {
-        GenericViewLayout(mainView: mainView, contents: subs).paint()
+        GenericViewLayout(mainView: mainView, subViews: subViews).paint()
     }
     
 }
@@ -56,12 +56,12 @@ extension GenericView: Renderable {
 /// View layout
 
 struct GenericViewLayout: UIViewLayout {
+    
     var mainView: GenericView
-    var contents: GenericView.Subs
+    var subViews: GenericView.Subviews
     
     func addSubViews() {
         mainView.addSubview(rootStack)
-
     }
     
     func addConstraints() {

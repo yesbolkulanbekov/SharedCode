@@ -82,7 +82,7 @@ extension MonsterStepper: Renderable {
     }
     
     func layout(in mainView: MonsterStepper) {
-        MonsterStepperLayout(mainView: mainView, contents: subs).paint()
+        MonsterStepperLayout(mainView: mainView, subViews: subs).paint()
     }
     
     
@@ -104,22 +104,22 @@ extension MonsterStepper: Renderable {
 
 struct MonsterStepperLayout: UIViewLayout {
     var mainView: MonsterStepper
-    var contents: MonsterStepper.Subs
+    var subViews: MonsterStepper.Subs
     
     func addSubViews() {
         mainView.addSubview(rootStack)
-        rootStack.addArrangedSubview(contents.leftButton)
-        rootStack.addArrangedSubview(contents.textLabel)
-        rootStack.addArrangedSubview(contents.rightButton)
+        rootStack.addArrangedSubview(subViews.leftButton)
+        rootStack.addArrangedSubview(subViews.textLabel)
+        rootStack.addArrangedSubview(subViews.rightButton)
     }
     
     func addConstraints() {
         rootStack.fillSuperview()
-        contents.leftButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        contents.leftButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        subViews.leftButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        subViews.leftButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
-        contents.rightButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        contents.rightButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        subViews.rightButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        subViews.rightButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
     }
     
     let rootStack = UIStackView { stack in
