@@ -4,7 +4,13 @@ import UIKit
 
 class GenericView: UIView {
 
+    struct Subviews {
+        
+    }
+    
     let subViews = GenericView.Subviews()
+
+/// Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,16 +40,13 @@ extension GenericView.Props {
 /// View configuration, content and styling
 
 extension GenericView: Renderable {
-    struct Subviews {
-
-    }
     
     func setup() {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
     func render(with props: GenericView.Props) {
-        
+
     }
     
     func layout(in mainView: GenericView) {
