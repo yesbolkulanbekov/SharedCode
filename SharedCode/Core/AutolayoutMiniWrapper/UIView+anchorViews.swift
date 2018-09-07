@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 extension UIView {
     
     public func fillSuperview() {
@@ -17,6 +18,13 @@ extension UIView {
                leading: superview?.layoutMarginsGuide.leadingAnchor,
                bottom: superview?.layoutMarginsGuide.bottomAnchor,
                trailing: superview?.layoutMarginsGuide.trailingAnchor)
+    }
+    
+    public func fillSuperviewWithsafeAreaLayoutGuide() {
+        anchor(top: superview?.safeAreaLayoutGuide.topAnchor,
+               leading: superview?.safeAreaLayoutGuide.leadingAnchor,
+               bottom: superview?.safeAreaLayoutGuide.bottomAnchor,
+               trailing: superview?.safeAreaLayoutGuide.trailingAnchor)
     }
     
     public func anchorSize(to view: UIView) {
