@@ -3,20 +3,20 @@ import UIKit
 
 
 class GenericView: UIView {
-
+    
     struct Subviews {
         
     }
     
     let subViews = GenericView.Subviews()
-
-/// Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupSelf()
+        configureSubViews()
+        styleSubviews()
         render(with: Props())
-        layout(in: self)
+        layout()
     }
     
     required init?(coder: NSCoder) {
@@ -34,23 +34,31 @@ extension GenericView {
 }
 
 extension GenericView.Props {
-
+    
 }
 
 /// View configuration, content and styling
 
 extension GenericView: Renderable {
     
-    func setup() {
+    private func setupSelf() {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func render(with props: GenericView.Props) {
-
+    private func configureSubViews() {
+        
     }
     
-    func layout(in mainView: GenericView) {
-        GenericViewLayout(mainView: mainView, subViews: subViews).paint()
+    func styleSubviews() {
+        
+    }
+    
+    func render(with props: GenericView.Props) {
+        
+    }
+    
+    func layout() {
+        GenericViewLayout(rootView: self).paint()
     }
     
 }
@@ -60,15 +68,20 @@ extension GenericView: Renderable {
 
 struct GenericViewLayout: UIViewLayout {
     
-    var mainView: GenericView
+    var rootView: GenericView
     var subViews: GenericView.Subviews
     
+    init(rootView: GenericView) {
+        self.rootView = rootView
+        self.subViews = rootView.subViews
+    }
+    
     func addSubViews() {
-        mainView.addSubview(rootStack)
+        rootView.addSubview(rootStack)
     }
     
     func addConstraints() {
-        rootStack.fillSuperview()
+        rootStack.addConstraints(equalToSuperview())
     }
     
     let rootStack = UIStackView { stack in

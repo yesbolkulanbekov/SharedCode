@@ -10,8 +10,6 @@ import Foundation
 
 public protocol Renderable {
     associatedtype Properties
-    associatedtype ViewType
     func render(with props: Properties)
-    func layout(in mainView: ViewType)
+    func layout()
 }
-

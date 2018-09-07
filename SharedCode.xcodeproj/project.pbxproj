@@ -115,8 +115,8 @@
 			children = (
 				44B5F9E320F5BCC3000DA324 /* GenericView */,
 				440FBB5B20F477C9000EE3D2 /* Core */,
-				440FBB5220F477C9000EE3D2 /* Helpers */,
 				440FBB4A20F477C8000EE3D2 /* Protocols */,
+				440FBB5220F477C9000EE3D2 /* Helpers */,
 				440FBB5420F477C9000EE3D2 /* Views */,
 			);
 			path = SharedCode;
@@ -171,9 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				440FBB5C20F477C9000EE3D2 /* Command.swift */,
+				440FBB6A20F477C9000EE3D2 /* Style.swift */,
 				44B5F9D920F5B9B0000DA324 /* AutolayoutMiniWrapper */,
 				440FBB5D20F477C9000EE3D2 /* Extensions */,
-				440FBB6A20F477C9000EE3D2 /* Style.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -181,6 +181,7 @@
 		440FBB5D20F477C9000EE3D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */,
 				440FBB5E20F477C9000EE3D2 /* UITextViewPlaceholder.swift */,
 				440FBB5F20F477C9000EE3D2 /* UIView+bottomEdgeView.swift */,
 				440FBB6020F477C9000EE3D2 /* UIStackView+addArrSubViews.swift */,
@@ -209,7 +210,6 @@
 			children = (
 				44B5F9FE20F5CB5E000DA324 /* GenericView.swift */,
 				44B5FA0020F5CB5E000DA324 /* Renderable.swift */,
-				44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */,
 				44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */,
 			);
 			path = GenericView;

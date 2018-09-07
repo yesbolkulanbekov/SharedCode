@@ -9,10 +9,6 @@
 import UIKit
 
 public protocol UIViewLayout {
-    associatedtype MainViewType
-    associatedtype ContentType
-    var mainView: MainViewType { get set }
-    var subViews: ContentType  { get set }
     func paint()
     func addSubViews()
     func addConstraints()
