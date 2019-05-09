@@ -36,6 +36,7 @@
 		440FBB8320F477C9000EE3D2 /* UIStackView+createBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */; };
 		440FBB8420F477C9000EE3D2 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
 		440FBB8620F477C9000EE3D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
+		442CE938228466AE008E0C93 /* SharedCodeFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 442CE936228466AE008E0C93 /* SharedCodeFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4468F51C21428974009B3143 /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468F51B21428973009B3143 /* GenericCell.swift */; };
 		44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
 		44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
@@ -76,6 +77,9 @@
 		440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+createBorder.swift"; sourceTree = "<group>"; };
 		440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchorViews.swift"; sourceTree = "<group>"; };
 		440FBB6A20F477C9000EE3D2 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		442CE934228466AE008E0C93 /* SharedCodeFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedCodeFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		442CE936228466AE008E0C93 /* SharedCodeFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedCodeFramework.h; sourceTree = "<group>"; };
+		442CE937228466AE008E0C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4468F51B21428973009B3143 /* GenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		44B5F9FE20F5CB5E000DA324 /* GenericView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		442CE931228466AE008E0C93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +111,7 @@
 			children = (
 				440FBB4920F47704000EE3D2 /* Start */,
 				440FBB3620F476EB000EE3D2 /* SharedCode */,
+				442CE935228466AE008E0C93 /* SharedCodeFramework */,
 				440FBB3520F476EB000EE3D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				440FBB3420F476EB000EE3D2 /* SharedCode.app */,
+				442CE934228466AE008E0C93 /* SharedCodeFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +211,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		442CE935228466AE008E0C93 /* SharedCodeFramework */ = {
+			isa = PBXGroup;
+			children = (
+				442CE936228466AE008E0C93 /* SharedCodeFramework.h */,
+				442CE937228466AE008E0C93 /* Info.plist */,
+			);
+			path = SharedCodeFramework;
+			sourceTree = "<group>";
+		};
 		44B5F9D920F5B9B0000DA324 /* AutolayoutMiniWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +242,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		442CE92F228466AE008E0C93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442CE938228466AE008E0C93 /* SharedCodeFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		440FBB3320F476EB000EE3D2 /* SharedCode */ = {
 			isa = PBXNativeTarget;
@@ -238,6 +271,24 @@
 			productReference = 440FBB3420F476EB000EE3D2 /* SharedCode.app */;
 			productType = "com.apple.product-type.application";
 		};
+		442CE933228466AE008E0C93 /* SharedCodeFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 442CE939228466AE008E0C93 /* Build configuration list for PBXNativeTarget "SharedCodeFramework" */;
+			buildPhases = (
+				442CE92F228466AE008E0C93 /* Headers */,
+				442CE930228466AE008E0C93 /* Sources */,
+				442CE931228466AE008E0C93 /* Frameworks */,
+				442CE932228466AE008E0C93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedCodeFramework;
+			productName = SharedCodeFramework;
+			productReference = 442CE934228466AE008E0C93 /* SharedCodeFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,6 +301,9 @@
 				TargetAttributes = {
 					440FBB3320F476EB000EE3D2 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					442CE933228466AE008E0C93 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -267,6 +321,7 @@
 			projectRoot = "";
 			targets = (
 				440FBB3320F476EB000EE3D2 /* SharedCode */,
+				442CE933228466AE008E0C93 /* SharedCodeFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +334,13 @@
 				440FBB4220F476EE000EE3D2 /* LaunchScreen.storyboard in Resources */,
 				440FBB3F20F476EE000EE3D2 /* Assets.xcassets in Resources */,
 				440FBB3D20F476EB000EE3D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		442CE932228466AE008E0C93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +383,13 @@
 				440FBB8220F477C9000EE3D2 /* String+Components.swift in Sources */,
 				440FBB7F20F477C9000EE3D2 /* UIViewController+StoryboardLoading.swift in Sources */,
 				44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		442CE930228466AE008E0C93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +565,67 @@
 			};
 			name = Release;
 		};
+		442CE93A228466AE008E0C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DWLNFPCE6H;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SharedCodeFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.SharedCodeFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		442CE93B228466AE008E0C93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DWLNFPCE6H;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SharedCodeFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.SharedCodeFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -513,6 +643,15 @@
 			buildConfigurations = (
 				440FBB4720F476EE000EE3D2 /* Debug */,
 				440FBB4820F476EE000EE3D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		442CE939228466AE008E0C93 /* Build configuration list for PBXNativeTarget "SharedCodeFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				442CE93A228466AE008E0C93 /* Debug */,
+				442CE93B228466AE008E0C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
