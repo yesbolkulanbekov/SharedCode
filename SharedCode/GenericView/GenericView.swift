@@ -84,7 +84,7 @@ struct GenericViewLayout: UIViewLayout {
         rootStack.addConstraints(equalToSuperview())
     }
     
-    let rootStack = UIStackView { stack in
+    let rootStack = UIStackView { (stack: UIStackView) in
         stack.axis = .vertical
         stack.distribution = .fill
         stack.alignment = .fill

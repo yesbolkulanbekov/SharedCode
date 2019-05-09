@@ -34,6 +34,20 @@ public enum Style {
     }
 }
 
+public enum Stack {
+    public static func verStack(_ stack: UIStackView) {
+        stack.axis = .vertical
+        stack.distribution = .fill
+        stack.alignment = .fill
+        stack.spacing = 8
+    }
+    
+    public static func marginStack(_ stack: UIStackView) {
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = UIEdgeInsets.init(all: 8)
+    }
+}
+
 public enum Color {
     public static let mango = rgb(255, 171, 48)
     public static let gray = rgb(98, 111, 126)

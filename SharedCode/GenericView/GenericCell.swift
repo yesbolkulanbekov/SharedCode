@@ -84,12 +84,7 @@ struct GenericCellLayout: UIViewLayout {
         rootStack.addConstraints(equalToSuperview())
     }
     
-    let rootStack = UIStackView { stack in
-        stack.axis = .vertical
-        stack.distribution = .fill
-        stack.alignment = .fill
-        stack.spacing = 8
-    }
+    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
     
 }
 

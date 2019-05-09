@@ -98,7 +98,7 @@
 		440FBB2B20F476EB000EE3D2 = {
 			isa = PBXGroup;
 			children = (
-				440FBB4920F47704000EE3D2 /* start */,
+				440FBB4920F47704000EE3D2 /* Start */,
 				440FBB3620F476EB000EE3D2 /* SharedCode */,
 				440FBB3520F476EB000EE3D2 /* Products */,
 			);
@@ -124,7 +124,7 @@
 			path = SharedCode;
 			sourceTree = "<group>";
 		};
-		440FBB4920F47704000EE3D2 /* start */ = {
+		440FBB4920F47704000EE3D2 /* Start */ = {
 			isa = PBXGroup;
 			children = (
 				440FBB3920F476EB000EE3D2 /* ViewController.swift */,
@@ -134,7 +134,7 @@
 				440FBB3B20F476EB000EE3D2 /* Main.storyboard */,
 				440FBB3720F476EB000EE3D2 /* AppDelegate.swift */,
 			);
-			path = start;
+			path = Start;
 			sourceTree = "<group>";
 		};
 		440FBB4A20F477C8000EE3D2 /* Protocols */ = {

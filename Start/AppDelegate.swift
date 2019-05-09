@@ -44,3 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//Changes from turaQshare
+
+// TODO: Generic view
+// TODO: AL mini wrapper
+// TODO: Delete monster tours references

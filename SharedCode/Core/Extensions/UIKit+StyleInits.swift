@@ -41,7 +41,7 @@ extension UIStackView {
 }
 
 extension UIStackView {
-    @nonobjc public convenience init(style: ((UIStackView) -> Void)...) {
+    @nonobjc public convenience init(_ style: ((UIStackView) -> Void)...) {
         self.init(frame: .zero)
         style.forEach { $0(self) }
     }
