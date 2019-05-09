@@ -13,8 +13,8 @@ class ButtonWithImage: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         if imageView != nil {
-            imageEdgeInsets = UIEdgeInsetsMake(3, (titleLabel?.frame.size.width)!, 0, 0)
-            titleEdgeInsets = UIEdgeInsetsMake(0, -(imageView?.frame.size.width)!, 0, 0)
+            imageEdgeInsets = UIEdgeInsets(top: 3, left: (titleLabel?.frame.size.width)!, bottom: 0, right: 0)
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageView?.frame.size.width)!, bottom: 0, right: 0)
             contentHorizontalAlignment = .leading
             contentVerticalAlignment   = .center
             imageView?.contentMode = .center

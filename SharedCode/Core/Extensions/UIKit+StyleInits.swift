@@ -20,7 +20,7 @@ extension UILabel {
 }
 
 extension UIButton {
-    @nonobjc public convenience init(type: UIButtonType = .system, style: ((UIButton) -> Void)...) {
+    @nonobjc public convenience init(type: UIButton.ButtonType = .system, style: ((UIButton) -> Void)...) {
         self.init(type: type)
         style.forEach { $0(self) }
     }

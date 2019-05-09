@@ -22,15 +22,15 @@ class Alerts {
     }
     
     static func customOneAction (_ title : String, message : String, action : String, handler: ((UIAlertAction) -> Void)?, vc: UIViewController){
-        let alertCT = UIAlertController (title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertCT.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: handler))
+        let alertCT = UIAlertController (title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alertCT.addAction(UIAlertAction(title: action, style: UIAlertAction.Style.default, handler: handler))
         vc.present(alertCT, animated: true, completion: nil)
     }
     
     static func customTwoActions (_ title : String, message : String, actionOne : String, handlerOne: ((UIAlertAction) -> Void)?, actionTwo:String, handlerTwo: ((UIAlertAction) -> Void)?, vc: UIViewController){
-        let alertCT = UIAlertController (title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertCT.addAction(UIAlertAction(title: actionOne, style: UIAlertActionStyle.default, handler: handlerOne))
-        alertCT.addAction(UIAlertAction(title: actionTwo, style: UIAlertActionStyle.default, handler: handlerTwo))
+        let alertCT = UIAlertController (title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alertCT.addAction(UIAlertAction(title: actionOne, style: UIAlertAction.Style.default, handler: handlerOne))
+        alertCT.addAction(UIAlertAction(title: actionTwo, style: UIAlertAction.Style.default, handler: handlerTwo))
         vc.present(alertCT, animated: true, completion: nil)
     }
     

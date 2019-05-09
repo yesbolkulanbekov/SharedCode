@@ -37,6 +37,36 @@
 		440FBB8420F477C9000EE3D2 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
 		440FBB8620F477C9000EE3D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
 		442CE938228466AE008E0C93 /* SharedCodeFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 442CE936228466AE008E0C93 /* SharedCodeFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		442CE97A22846DD4008E0C93 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
+		442CE97B22846DD4008E0C93 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0020F5CB5E000DA324 /* Renderable.swift */; };
+		442CE97C22846DD4008E0C93 /* UIViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */; };
+		442CE97D22846DD4008E0C93 /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468F51B21428973009B3143 /* GenericCell.swift */; };
+		442CE97E22846DD4008E0C93 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5C20F477C9000EE3D2 /* Command.swift */; };
+		442CE97F22846DD4008E0C93 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
+		442CE98022846DD4008E0C93 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
+		442CE98122846DD4008E0C93 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
+		442CE98222846DD4008E0C93 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */; };
+		442CE98322846DD4008E0C93 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5E20F477C9000EE3D2 /* UITextViewPlaceholder.swift */; };
+		442CE98422846DD4008E0C93 /* UIView+bottomEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5F20F477C9000EE3D2 /* UIView+bottomEdgeView.swift */; };
+		442CE98522846DD4008E0C93 /* UIStackView+addArrSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6020F477C9000EE3D2 /* UIStackView+addArrSubViews.swift */; };
+		442CE98622846DD4008E0C93 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6120F477C9000EE3D2 /* UIColor+hexString.swift */; };
+		442CE98722846DD4008E0C93 /* UIStackView+backgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6220F477C9000EE3D2 /* UIStackView+backgroundColor.swift */; };
+		442CE98822846DD4008E0C93 /* UIViewController+StoryboardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6320F477C9000EE3D2 /* UIViewController+StoryboardLoading.swift */; };
+		442CE98922846DD4008E0C93 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6420F477C9000EE3D2 /* Optional+Unwrap.swift */; };
+		442CE98A22846DD4008E0C93 /* UIEdgeInsets+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6520F477C9000EE3D2 /* UIEdgeInsets+Inits.swift */; };
+		442CE98B22846DD4008E0C93 /* String+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6620F477C9000EE3D2 /* String+Components.swift */; };
+		442CE98C22846DD4008E0C93 /* UIStackView+createBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */; };
+		442CE98D22846DD4008E0C93 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4C20F477C8000EE3D2 /* LoadingDelegate.swift */; };
+		442CE98E22846DD4008E0C93 /* DidFailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4E20F477C8000EE3D2 /* DidFailable.swift */; };
+		442CE98F22846DD4008E0C93 /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5020F477C8000EE3D2 /* Popable.swift */; };
+		442CE99022846DD4008E0C93 /* HasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB4F20F477C8000EE3D2 /* HasViewController.swift */; };
+		442CE99122846DD4008E0C93 /* DisplaysAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5120F477C8000EE3D2 /* DisplaysAlert.swift */; };
+		442CE99222846DD4008E0C93 /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5320F477C9000EE3D2 /* PhoneFormatter.swift */; };
+		442CE99322846DD4008E0C93 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5520F477C9000EE3D2 /* RatingsView.swift */; };
+		442CE99422846DD4008E0C93 /* EmptyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5620F477C9000EE3D2 /* EmptyContentView.swift */; };
+		442CE99522846DD4008E0C93 /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5720F477C9000EE3D2 /* ButtonWithImage.swift */; };
+		442CE99622846DD4008E0C93 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5820F477C9000EE3D2 /* Alerts.swift */; };
+		442CE99722846DD4008E0C93 /* MonsterStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5920F477C9000EE3D2 /* MonsterStepper.swift */; };
 		4468F51C21428974009B3143 /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468F51B21428973009B3143 /* GenericCell.swift */; };
 		44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
 		44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
@@ -390,6 +420,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442CE97A22846DD4008E0C93 /* GenericView.swift in Sources */,
+				442CE97B22846DD4008E0C93 /* Renderable.swift in Sources */,
+				442CE97C22846DD4008E0C93 /* UIViewLayout.swift in Sources */,
+				442CE97D22846DD4008E0C93 /* GenericCell.swift in Sources */,
+				442CE97E22846DD4008E0C93 /* Command.swift in Sources */,
+				442CE97F22846DD4008E0C93 /* Style.swift in Sources */,
+				442CE98022846DD4008E0C93 /* UIView+anchorViews.swift in Sources */,
+				442CE98122846DD4008E0C93 /* UIView+Constraints.swift in Sources */,
+				442CE98222846DD4008E0C93 /* UIKit+StyleInits.swift in Sources */,
+				442CE98322846DD4008E0C93 /* UITextViewPlaceholder.swift in Sources */,
+				442CE98422846DD4008E0C93 /* UIView+bottomEdgeView.swift in Sources */,
+				442CE98522846DD4008E0C93 /* UIStackView+addArrSubViews.swift in Sources */,
+				442CE98622846DD4008E0C93 /* UIColor+hexString.swift in Sources */,
+				442CE98722846DD4008E0C93 /* UIStackView+backgroundColor.swift in Sources */,
+				442CE98822846DD4008E0C93 /* UIViewController+StoryboardLoading.swift in Sources */,
+				442CE98922846DD4008E0C93 /* Optional+Unwrap.swift in Sources */,
+				442CE98A22846DD4008E0C93 /* UIEdgeInsets+Inits.swift in Sources */,
+				442CE98B22846DD4008E0C93 /* String+Components.swift in Sources */,
+				442CE98C22846DD4008E0C93 /* UIStackView+createBorder.swift in Sources */,
+				442CE98D22846DD4008E0C93 /* LoadingDelegate.swift in Sources */,
+				442CE98E22846DD4008E0C93 /* DidFailable.swift in Sources */,
+				442CE98F22846DD4008E0C93 /* Popable.swift in Sources */,
+				442CE99022846DD4008E0C93 /* HasViewController.swift in Sources */,
+				442CE99122846DD4008E0C93 /* DisplaysAlert.swift in Sources */,
+				442CE99222846DD4008E0C93 /* PhoneFormatter.swift in Sources */,
+				442CE99322846DD4008E0C93 /* RatingsView.swift in Sources */,
+				442CE99422846DD4008E0C93 /* EmptyContentView.swift in Sources */,
+				442CE99522846DD4008E0C93 /* ButtonWithImage.swift in Sources */,
+				442CE99622846DD4008E0C93 /* Alerts.swift in Sources */,
+				442CE99722846DD4008E0C93 /* MonsterStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
