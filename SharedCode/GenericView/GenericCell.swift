@@ -77,11 +77,11 @@ struct GenericCellLayout: UIViewLayout {
     }
     
     func addSubViews() {
-        rootView.addSubview(rootStack)
+        rootView.contentView.addSubview(rootStack)
     }
     
     func addConstraints() {
-        rootStack.addConstraints(equalToSuperview())
+        rootStack.addConstraints(equalTo(superView: rootView.contentView))
     }
     
     let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
