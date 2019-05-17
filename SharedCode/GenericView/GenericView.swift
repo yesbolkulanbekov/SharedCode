@@ -81,7 +81,7 @@ struct GenericViewLayout: UIViewLayout {
     }
     
     func addConstraints() {
-        rootStack.addConstraints(equalToSuperview())
+        rootStack.addConstraints(equalToSafeArea(superView: rootView))
     }
     
     let rootStack = UIStackView { (stack: UIStackView) in
@@ -92,6 +92,108 @@ struct GenericViewLayout: UIViewLayout {
     }
     
 }
+
+
+
+class GenericViewC: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupSelf()
+        configureSubViews()
+        styleSubviews()
+        sv.render(with: Props.zero)
+        sv.renderConstantData()
+        GenericViewCLayout(for: self).paint()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    /// Properties
+    
+    let sv = Subviews()
+    
+    var props = Props.zero {
+        didSet {
+            sv.render(with: props)
+        }
+    }
+    
+}
+
+/// View configuration, content and styling
+
+extension GenericViewC {
+    
+    struct Props {
+        
+        static let zero = Props(
+            
+        )
+    }
+    
+    struct Subviews {
+        func render(with props: Props) {
+            
+        }
+        
+        func renderConstantData() {
+            
+        }
+    }
+    
+    func styleSubviews() {
+        
+    }
+    
+    private func configureSubViews() {
+        
+    }
+    
+    private func setupSelf() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+
+
+
+/// View layout
+
+struct GenericViewCLayout {
+    
+    var rootView: GenericViewC
+    var sv: GenericViewC.Subviews
+    
+    init(for rootView: GenericViewC) {
+        self.rootView = rootView
+        self.sv = rootView.sv
+    }
+    
+    func paint() {
+        addSubViews()
+        addConstraints()
+    }
+    
+    func addSubViews() {
+        rootView.addSubview(rootStack)
+        
+    }
+    
+    func addConstraints() {
+        rootStack.addConstraints(equalToSafeArea(superView: rootView))
+    }
+    
+    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
+
+    
+}
+
+
+
+
+
 
 
 
