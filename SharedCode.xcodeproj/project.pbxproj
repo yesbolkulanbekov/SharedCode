@@ -73,6 +73,9 @@
 		44B5FA0320F5CB5E000DA324 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */; };
 		44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0020F5CB5E000DA324 /* Renderable.swift */; };
 		44B5FA0520F5CB5E000DA324 /* UIViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */; };
+		44CC3BAF229010CC00DE8542 /* RootError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAC229010CC00DE8542 /* RootError.swift */; };
+		44CC3BB0229010CC00DE8542 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAD229010CC00DE8542 /* BaseService.swift */; };
+		44CC3BB1229010CC00DE8542 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAE229010CC00DE8542 /* ServerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +119,9 @@
 		44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+StyleInits.swift"; sourceTree = "<group>"; };
 		44B5FA0020F5CB5E000DA324 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		44B5FA0120F5CB5E000DA324 /* UIViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLayout.swift; sourceTree = "<group>"; };
+		44CC3BAC229010CC00DE8542 /* RootError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootError.swift; sourceTree = "<group>"; };
+		44CC3BAD229010CC00DE8542 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		44CC3BAE229010CC00DE8542 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		440FBB3620F476EB000EE3D2 /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				44CC3BAB2290109700DE8542 /* Moya */,
 				44B5F9E320F5BCC3000DA324 /* GenericView */,
 				440FBB5B20F477C9000EE3D2 /* Core */,
 				440FBB4A20F477C8000EE3D2 /* Protocols */,
@@ -268,6 +275,16 @@
 				4468F51B21428973009B3143 /* GenericCell.swift */,
 			);
 			path = GenericView;
+			sourceTree = "<group>";
+		};
+		44CC3BAB2290109700DE8542 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				44CC3BAD229010CC00DE8542 /* BaseService.swift */,
+				44CC3BAC229010CC00DE8542 /* RootError.swift */,
+				44CC3BAE229010CC00DE8542 /* ServerError.swift */,
+			);
+			path = Moya;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,11 +404,13 @@
 				440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */,
 				440FBB7A20F477C9000EE3D2 /* UITextViewPlaceholder.swift in Sources */,
 				44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */,
+				44CC3BAF229010CC00DE8542 /* RootError.swift in Sources */,
 				440FBB7420F477C9000EE3D2 /* EmptyContentView.swift in Sources */,
 				440FBB6E20F477C9000EE3D2 /* DidFailable.swift in Sources */,
 				440FBB7C20F477C9000EE3D2 /* UIStackView+addArrSubViews.swift in Sources */,
 				4468F51C21428974009B3143 /* GenericCell.swift in Sources */,
 				44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */,
+				44CC3BB0229010CC00DE8542 /* BaseService.swift in Sources */,
 				440FBB7B20F477C9000EE3D2 /* UIView+bottomEdgeView.swift in Sources */,
 				440FBB7D20F477C9000EE3D2 /* UIColor+hexString.swift in Sources */,
 				440FBB6C20F477C9000EE3D2 /* LoadingDelegate.swift in Sources */,
@@ -399,6 +418,7 @@
 				440FBB3820F476EB000EE3D2 /* AppDelegate.swift in Sources */,
 				440FBB7E20F477C9000EE3D2 /* UIStackView+backgroundColor.swift in Sources */,
 				440FBB8020F477C9000EE3D2 /* Optional+Unwrap.swift in Sources */,
+				44CC3BB1229010CC00DE8542 /* ServerError.swift in Sources */,
 				440FBB8320F477C9000EE3D2 /* UIStackView+createBorder.swift in Sources */,
 				440FBB6F20F477C9000EE3D2 /* HasViewController.swift in Sources */,
 				440FBB7320F477C9000EE3D2 /* RatingsView.swift in Sources */,
