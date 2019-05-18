@@ -15,15 +15,14 @@
 //let multiProvider = MoyaProvider<MultiTarget>()
 //
 //protocol BaseService: TargetType {
+//    associatedtype RootObject: BaseMappable
+//    associatedtype CustomError: Error
+//    
 //    func parseOnMoyaSuccess(_ json: Any)
 //    func parseOnMoyaFailure(_ errorJson: Any)
 //    func parseOnMoyaFailure(_ moyaError: MoyaError)
 //    
-//    
-//    associatedtype RootObject: BaseMappable
-//    associatedtype CustomError: Error
 //    var onReturn: (Result<RootObject, CustomError>) -> Void { get set }
-//    
 //}
 //
 //extension BaseService {
