@@ -76,21 +76,21 @@ public func align<Anchor>(my from: KeyPath<UIView, Anchor>,
 
 // MARK: Support Types
 
-struct Dims {
-    static let width = \UIView.widthAnchor
-    static let height = \UIView.heightAnchor
+public struct Dims {
+    public static let width = \UIView.widthAnchor
+    public static let height = \UIView.heightAnchor
 }
 
-struct Ancs {
-    static let top = \UIView.topAnchor
-    static let bottom = \UIView.bottomAnchor
-    static let leading = \UIView.leadingAnchor
-    static let trailing = \UIView.trailingAnchor
-    static let verticalCenter = \UIView.centerXAnchor
-    static let horizontalCenter = \UIView.centerYAnchor
+public struct Ancs {
+    public static let top = \UIView.topAnchor
+    public static let bottom = \UIView.bottomAnchor
+    public static let leading = \UIView.leadingAnchor
+    public static let trailing = \UIView.trailingAnchor
+    public static let verticalCenter = \UIView.centerXAnchor
+    public static let horizontalCenter = \UIView.centerYAnchor
     
-    static let firstBaseline = \UIView.firstBaselineAnchor
-    static let lastBaseline = \UIView.lastBaselineAnchor
+    public static let firstBaseline = \UIView.firstBaselineAnchor
+    public static let lastBaseline = \UIView.lastBaselineAnchor
 }
 
 
@@ -147,7 +147,7 @@ public func equal<Anchor, Axis>(_ view: UIView,
 ///   - keyPath: constraint key path
 ///   - constant: value
 /// - Returns: created constraint
-public func equal<LayoutDimension>(_ keyPath: KeyPath<UIView, LayoutDimension>,
+public func equal<LayoutDimension>(dimension keyPath: KeyPath<UIView, LayoutDimension>,
                                    to constant: CGFloat) -> Constraint where LayoutDimension: NSLayoutDimension {
     return { layoutView in
         layoutView[keyPath: keyPath].constraint(equalToConstant: constant)
