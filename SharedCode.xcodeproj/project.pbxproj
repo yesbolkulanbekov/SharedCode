@@ -76,6 +76,7 @@
 		44CC3BAF229010CC00DE8542 /* RootError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAC229010CC00DE8542 /* RootError.swift */; };
 		44CC3BB0229010CC00DE8542 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAD229010CC00DE8542 /* BaseService.swift */; };
 		44CC3BB1229010CC00DE8542 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC3BAE229010CC00DE8542 /* ServerError.swift */; };
+		44FF1EE32297C0E2001CA902 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF1EE22297C0E2001CA902 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		44CC3BAC229010CC00DE8542 /* RootError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootError.swift; sourceTree = "<group>"; };
 		44CC3BAD229010CC00DE8542 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		44CC3BAE229010CC00DE8542 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		44FF1EE22297C0E2001CA902 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				440FBB4A20F477C8000EE3D2 /* Protocols */,
 				440FBB5220F477C9000EE3D2 /* Helpers */,
 				440FBB5420F477C9000EE3D2 /* Views */,
+				44FF1EE22297C0E2001CA902 /* RootViewController.swift */,
 			);
 			path = SharedCode;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			files = (
 				440FBB7920F477C9000EE3D2 /* Command.swift in Sources */,
 				440FBB7120F477C9000EE3D2 /* DisplaysAlert.swift in Sources */,
+				44FF1EE32297C0E2001CA902 /* RootViewController.swift in Sources */,
 				44B5FA0320F5CB5E000DA324 /* UIKit+StyleInits.swift in Sources */,
 				440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */,
 				440FBB7A20F477C9000EE3D2 /* UITextViewPlaceholder.swift in Sources */,
