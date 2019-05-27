@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol HasViewController {
+public protocol HasViewController {
     func getVC() -> UIViewController
 }
 
 extension HasViewController {
-    func getVC() -> UIViewController {
+    public func getVC() -> UIViewController {
         return self as! UIViewController
     }
 }
