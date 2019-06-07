@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440499C422AA584B00B4CEFB /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440499C322AA584B00B4CEFB /* LoadingHandler.swift */; };
 		440FBB3820F476EB000EE3D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB3720F476EB000EE3D2 /* AppDelegate.swift */; };
 		440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB3920F476EB000EE3D2 /* ViewController.swift */; };
 		440FBB3D20F476EB000EE3D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440FBB3B20F476EB000EE3D2 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440499C322AA584B00B4CEFB /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
 		440FBB3420F476EB000EE3D2 /* SharedCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		440FBB3720F476EB000EE3D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		440FBB3920F476EB000EE3D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				440FBB5020F477C8000EE3D2 /* Popable.swift */,
 				440FBB4F20F477C8000EE3D2 /* HasViewController.swift */,
 				440FBB5120F477C8000EE3D2 /* DisplaysAlert.swift */,
+				440499C322AA584B00B4CEFB /* LoadingHandler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */,
 				440FBB7A20F477C9000EE3D2 /* UITextViewPlaceholder.swift in Sources */,
 				44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */,
+				440499C422AA584B00B4CEFB /* LoadingHandler.swift in Sources */,
 				44CC3BAF229010CC00DE8542 /* RootError.swift in Sources */,
 				440FBB7420F477C9000EE3D2 /* EmptyContentView.swift in Sources */,
 				440FBB6E20F477C9000EE3D2 /* DidFailable.swift in Sources */,
