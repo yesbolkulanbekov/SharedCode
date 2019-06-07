@@ -6,13 +6,11 @@
 //  Copyright © 2019 Lobster. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
-public protocol LoadingHandler{
-    public func showLoading()
-    public func hideLoading()
+public protocol LoadingHandler {
+    func showLoading()
+    func hideLoading()
 }
 
 public extension LoadingHandler where Self: UIViewController  {

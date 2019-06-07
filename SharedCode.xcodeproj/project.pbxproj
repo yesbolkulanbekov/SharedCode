@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		440499C422AA584B00B4CEFB /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440499C322AA584B00B4CEFB /* LoadingHandler.swift */; };
+		440499C522AA5A8A00B4CEFB /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440499C322AA584B00B4CEFB /* LoadingHandler.swift */; };
 		440FBB3820F476EB000EE3D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB3720F476EB000EE3D2 /* AppDelegate.swift */; };
 		440FBB3A20F476EB000EE3D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB3920F476EB000EE3D2 /* ViewController.swift */; };
 		440FBB3D20F476EB000EE3D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440FBB3B20F476EB000EE3D2 /* Main.storyboard */; };
@@ -448,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440499C522AA5A8A00B4CEFB /* LoadingHandler.swift in Sources */,
 				442CE97A22846DD4008E0C93 /* GenericView.swift in Sources */,
 				442CE97B22846DD4008E0C93 /* Renderable.swift in Sources */,
 				442CE97C22846DD4008E0C93 /* UIViewLayout.swift in Sources */,
