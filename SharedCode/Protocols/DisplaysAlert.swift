@@ -8,22 +8,56 @@
 
 import UIKit
 
-protocol DisplaysAlert {
+public protocol DisplaysAlert {
     func displayAlert(with message: String)
-    func disPlayAlert(with message: String, action: @escaping (UIAlertAction) -> Void )
-
+    func disPlayAlert(with message: String, action: @escaping () -> Void )
+    
 }
 
-extension DisplaysAlert {
-    func displayAlert(with message: String) {
-        Alerts.defaultMessageOK(message, vc: self as! UIViewController)
+extension DisplaysAlert where Self : UIViewController {
+    public func displayAlert(with message: String) {
+        let alertPresenter = AlertPresenter(message: message,
+                                            acceptTitle: "Ok",
+                                            handler: { })
+        alertPresenter.present(in: self)
+        
     }
     
-    func disPlayAlert(with message: String, action: @escaping (UIAlertAction) -> Void ) {
-        Alerts.customOneAction("", message: message,
-                               action: "Перейти на главный эран",
-                               handler: action,
-                               vc: self as! UIViewController)
+    public func disPlayAlert(with message: String, action: @escaping () -> Void ) {
+        let alertPresenter = AlertPresenter(message: message,
+                                            acceptTitle: "Ok",
+                                            handler: action)
+        alertPresenter.present(in: self)
     }
+    
+}
 
+
+public struct AlertPresenter {
+    
+    public let message: String
+    
+    public let acceptTitle: String
+    
+    public let handler: () -> Void
+    
+    public func present(in viewController: UIViewController) {
+        let alert = UIAlertController(
+            title: nil,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let readTheMessageAction = UIAlertAction(title: acceptTitle, style: .default) { _ in
+            self.handler()
+        }
+        
+        alert.addAction(readTheMessageAction)
+        
+        viewController.present(alert, animated: true)
+    }
+}
+
+public enum Outcome {
+    case accepted
 }
