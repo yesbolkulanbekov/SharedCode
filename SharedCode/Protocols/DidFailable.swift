@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol DidFailable {
-    func didFail(with errorMessage: String)
+public protocol Failable {
+    func didFail(with error: Error)
 }
 
 
