@@ -92,6 +92,103 @@ struct GenericCellLayout: UIViewLayout {
 
 
 
+class GenericViewTableCell: UITableViewCell {
+    
+    struct Props {
+        
+        static let zero = Props(
+            
+        )
+    }
+    
+    struct Subviews {
+        func render(with props: Props) {
+            
+        }
+        
+        func renderConstantData() {
+            
+        }
+    }
+    
+    /// Properties
+    
+    let sv = Subviews()
+    
+    var props = Props.zero {
+        didSet {
+            sv.render(with: props)
+        }
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupSelf()
+        configureSubViews()
+        styleSubviews()
+        sv.render(with: Props.zero)
+        sv.renderConstantData()
+        GenericViewTableCellLayout(for: self).paint()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+/// View configuration, content and styling
+
+extension GenericViewTableCell {
+    
+    private func styleSubviews() {
+        
+    }
+    
+    private func configureSubViews() {
+        
+    }
+    
+    private func setupSelf() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+}
+
+
+
+/// View layout
+
+struct GenericViewTableCellLayout {
+    
+    var sv: GenericViewTableCell.Subviews
+    var contentView: UIView
+    var containerView: UIView
+    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
+    
+    init(for rootView: GenericViewTableCell) {
+        self.contentView = rootView.contentView
+        self.sv = rootView.sv
+        self.containerView = UIView()
+    }
+    
+    func paint() {
+        addSubViews()
+        addConstraints()
+    }
+}
+
+extension GenericViewTableCellLayout {
+    
+    func addSubViews() {
+        
+    }
+    
+    func addConstraints() {
+        
+    }
+    
+}
+
 
 
 
