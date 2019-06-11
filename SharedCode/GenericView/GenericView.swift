@@ -97,36 +97,6 @@ struct GenericViewLayout: UIViewLayout {
 
 class GenericViewC: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSelf()
-        configureSubViews()
-        styleSubviews()
-        sv.render(with: Props.zero)
-        sv.renderConstantData()
-        GenericViewCLayout(for: self).paint()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    /// Properties
-    
-    let sv = Subviews()
-    
-    var props = Props.zero {
-        didSet {
-            sv.render(with: props)
-        }
-    }
-    
-}
-
-/// View configuration, content and styling
-
-extension GenericViewC {
-    
     struct Props {
         
         static let zero = Props(
@@ -144,7 +114,36 @@ extension GenericViewC {
         }
     }
     
-    func styleSubviews() {
+    /// Properties
+    
+    let sv = Subviews()
+    
+    var props = Props.zero {
+        didSet {
+            sv.render(with: props)
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupSelf()
+        configureSubViews()
+        styleSubviews()
+        sv.render(with: Props.zero)
+        sv.renderConstantData()
+        GenericViewCLayout(for: self).paint()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+/// View configuration, content and styling
+
+extension GenericViewC {
+    
+    private func styleSubviews() {
         
     }
     
@@ -155,6 +154,7 @@ extension GenericViewC {
     private func setupSelf() {
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
 }
 
 
@@ -165,6 +165,7 @@ struct GenericViewCLayout {
     
     var rootView: GenericViewC
     var sv: GenericViewC.Subviews
+    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
     
     init(for rootView: GenericViewC) {
         self.rootView = rootView
@@ -175,6 +176,9 @@ struct GenericViewCLayout {
         addSubViews()
         addConstraints()
     }
+}
+
+extension GenericViewCLayout {
     
     func addSubViews() {
         rootView.addSubview(rootStack)
@@ -185,11 +189,7 @@ struct GenericViewCLayout {
         rootStack.addConstraints(equalToSafeArea(superView: rootView))
     }
     
-    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
-
-    
 }
-
 
 
 
