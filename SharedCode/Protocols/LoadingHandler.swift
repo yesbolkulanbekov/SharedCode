@@ -46,7 +46,7 @@ public extension LoadingHandler where Self: UIViewController  {
             return indicator
         }
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.tag = indicatorViewTag
         indicator.startAnimating()
