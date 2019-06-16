@@ -38,6 +38,8 @@
 		440FBB8320F477C9000EE3D2 /* UIStackView+createBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */; };
 		440FBB8420F477C9000EE3D2 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
 		440FBB8620F477C9000EE3D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
+		441272AA22B651CB00ECAD86 /* UIView+Constraints+New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441272A922B651CB00ECAD86 /* UIView+Constraints+New.swift */; };
+		441272AB22B651E400ECAD86 /* UIView+Constraints+New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441272A922B651CB00ECAD86 /* UIView+Constraints+New.swift */; };
 		442CE938228466AE008E0C93 /* SharedCodeFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 442CE936228466AE008E0C93 /* SharedCodeFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		442CE97A22846DD4008E0C93 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
 		442CE97B22846DD4008E0C93 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0020F5CB5E000DA324 /* Renderable.swift */; };
@@ -114,6 +116,7 @@
 		440FBB6720F477C9000EE3D2 /* UIStackView+createBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+createBorder.swift"; sourceTree = "<group>"; };
 		440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchorViews.swift"; sourceTree = "<group>"; };
 		440FBB6A20F477C9000EE3D2 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		441272A922B651CB00ECAD86 /* UIView+Constraints+New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints+New.swift"; sourceTree = "<group>"; };
 		442CE934228466AE008E0C93 /* SharedCodeFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedCodeFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		442CE936228466AE008E0C93 /* SharedCodeFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedCodeFramework.h; sourceTree = "<group>"; };
 		442CE937228466AE008E0C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 			children = (
 				440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */,
 				44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */,
+				441272A922B651CB00ECAD86 /* UIView+Constraints+New.swift */,
 			);
 			path = AutolayoutMiniWrapper;
 			sourceTree = "<group>";
@@ -439,6 +443,7 @@
 				44B5FA0520F5CB5E000DA324 /* UIViewLayout.swift in Sources */,
 				440FBB7620F477C9000EE3D2 /* Alerts.swift in Sources */,
 				440FBB7220F477C9000EE3D2 /* PhoneFormatter.swift in Sources */,
+				441272AA22B651CB00ECAD86 /* UIView+Constraints+New.swift in Sources */,
 				440FBB8220F477C9000EE3D2 /* String+Components.swift in Sources */,
 				440FBB7F20F477C9000EE3D2 /* UIViewController+StoryboardLoading.swift in Sources */,
 				44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */,
@@ -449,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				441272AB22B651E400ECAD86 /* UIView+Constraints+New.swift in Sources */,
 				440499C522AA5A8A00B4CEFB /* LoadingHandler.swift in Sources */,
 				442CE97A22846DD4008E0C93 /* GenericView.swift in Sources */,
 				442CE97B22846DD4008E0C93 /* Renderable.swift in Sources */,

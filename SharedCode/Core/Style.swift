@@ -35,14 +35,17 @@ public enum Style {
 }
 
 public enum Stack {
-    public static func verStack(_ stack: UIStackView) {
+    public static func vStack(_ stack: UIStackView) {
         stack.axis = .vertical
-        stack.distribution = .fill
-        stack.alignment = .fill
         stack.spacing = 8
     }
     
-    public static func marginStack(_ stack: UIStackView) {
+    public static func hStack(_ stack: UIStackView) {
+        stack.axis = .horizontal
+        stack.spacing = 8
+    }
+    
+    public static func padStack(_ stack: UIStackView) {
         stack.isLayoutMarginsRelativeArrangement = true
         stack.layoutMargins = UIEdgeInsets.init(all: 8)
     }

@@ -84,7 +84,7 @@ struct GenericCellLayout: UIViewLayout {
         rootStack.addConstraints(equalTo(superView: rootView.contentView))
     }
     
-    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
+    let rootStack = UIStackView(Stack.vStack, Stack.padStack)
     
 }
 
@@ -163,7 +163,7 @@ struct GenericViewTableCellLayout {
     var sv: GenericViewTableCell.Subviews
     var contentView: UIView
     var containerView: UIView
-    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
+    let rootStack = UIStackView(Stack.vStack, Stack.padStack)
     
     init(for rootView: GenericViewTableCell) {
         self.contentView = rootView.contentView

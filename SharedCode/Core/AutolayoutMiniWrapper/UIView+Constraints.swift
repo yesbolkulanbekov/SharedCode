@@ -50,52 +50,8 @@ public extension UIView {
 }
 
 
-// MARK: NEW METHODS
 
 
-/// Example: `align(my: \.widthAnchor, with: \.heightAnchor, of: view)`
-
-
-public func align<Anchor>(my from: KeyPath<UIView, Anchor>,
-                          with to : KeyPath<UIView, Anchor>,
-                          of view: UIView,
-                          multBy multiplier: CGFloat = 1,
-                          plus constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutDimension
-{
-    return { layoutView in
-        let myAnchor = layoutView[keyPath: from]
-        let otherViewAnchor = view[keyPath: to]
-        return myAnchor.constraint(
-            equalTo: otherViewAnchor,
-            multiplier: multiplier,
-            constant: constant
-        )
-    }
-    
-}
-
-// MARK: Support Types
-
-public struct Dims {
-    public static let width = \UIView.widthAnchor
-    public static let height = \UIView.heightAnchor
-}
-
-public struct Ancs {
-    public static let top = \UIView.topAnchor
-    public static let bottom = \UIView.bottomAnchor
-    public static let leading = \UIView.leadingAnchor
-    public static let trailing = \UIView.trailingAnchor
-    public static let verticalCenter = \UIView.centerXAnchor
-    public static let horizontalCenter = \UIView.centerYAnchor
-    
-    public static let firstBaseline = \UIView.firstBaselineAnchor
-    public static let lastBaseline = \UIView.lastBaselineAnchor
-}
-
-
-
-// MARK: OLD VERSION
 
 
 /// Describes relation between dimension of two views
@@ -117,12 +73,6 @@ public func equal<Anchor>(_ view: UIView,
         layoutView[keyPath: from].constraint(equalTo: view[keyPath: to],multiplier: multiplier, constant: constant)
     }
 }
-
-
-
-
-
-
 
 
 /// Describes constraint that is equal to constraint from different view.
@@ -174,6 +124,7 @@ public func equal<Anchor, Axis>(_ view: UIView,
     }
 }
 
+
 /// Describes relation between constraints of two views
 /// Example: `equal(logoImageView, \.topAnchor, \.bottomAnchor, lessOrEqual: 80)`
 /// will create constraint where topAnchor of current view is linked to bottomAnchor of passed view with offset less or equal 80
@@ -192,6 +143,7 @@ public func equal<Anchor, Axis>(_ view: UIView,
         layoutView[keyPath: from].constraint(lessThanOrEqualTo: view[keyPath: to], constant: lessOrEqual)
     }
 }
+
 
 /// Describes relation between constraints of two views
 /// Example: `equal(logoImageView, \.topAnchor, \.bottomAnchor, greaterOrEqual: 80)`
@@ -234,7 +186,6 @@ public func equal<Axis, Anchor>(_ view: UIView,
 /// - Parameter insets: Optional insets parameter. By default it's set to .zero.
 /// - Returns: Array of `Constraint`.
 /// - Warning: This method uses force-unwrap on view's superview!
-
 public func equalToSafeArea(superView view: UIView, with insets: UIEdgeInsets = .zero) -> [Constraint] {
     return [
         equal(view, \UIView.topAnchor,   \UIView.safeLayoutGuide.topAnchor, constant: insets.top),
@@ -255,12 +206,3 @@ public func equalTo(superView view: UIView, with insets: UIEdgeInsets = .zero) -
 
 
 
-extension UIView {
-    var safeLayoutGuide: UILayoutGuide {
-        if #available(iOS 11, *) {
-            return safeAreaLayoutGuide
-        } else {
-            return layoutMarginsGuide
-        }
-    }
-}

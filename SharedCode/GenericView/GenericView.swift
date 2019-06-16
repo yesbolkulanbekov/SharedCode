@@ -165,7 +165,7 @@ struct GenericViewCLayout {
     
     var rootView: GenericViewC
     var sv: GenericViewC.Subviews
-    let rootStack = UIStackView(Stack.verStack, Stack.marginStack)
+    let rootStack = UIStackView(Stack.vStack, Stack.padStack)
     
     init(for rootView: GenericViewC) {
         self.rootView = rootView

@@ -1,0 +1,84 @@
+//
+//  UIView+Constraints+New.swift
+//  SharedCode
+//
+//  Created by Yesbol Kulanbekov on 6/16/19.
+//  Copyright © 2019 Lobster. All rights reserved.
+//
+
+import UIKit
+
+
+
+/// Example: `align(my: \.widthAnchor, with: \.heightAnchor, of: view)`
+public func align<Anchor>(my from: KeyPath<UIView, Anchor>,
+                          with to : KeyPath<UIView, Anchor>,
+                          of view: UIView,
+                          multBy multiplier: CGFloat = 1,
+                          plus constant: CGFloat = 0) -> Constraint where Anchor: NSLayoutDimension
+{
+    let constraint: Constraint =  { layoutView in
+        let myAnchor = layoutView[keyPath: from]
+        let otherViewAnchor = view[keyPath: to]
+        let constraint: NSLayoutConstraint = myAnchor.constraint(
+            equalTo: otherViewAnchor,
+            multiplier: multiplier,
+            constant: constant
+        )
+    
+        return constraint
+    }
+    
+    return constraint
+}
+
+
+/// Pin view to its superview
+public func pinToSuper(with insets: UIEdgeInsets = UIEdgeInsets(all: 0)) -> [Constraint] {
+    return [
+        { $0.topAnchor.constraint(equalTo: $0.superview!.topAnchor, constant: insets.top )},
+        { $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor, constant: -insets.bottom )},
+        { $0.leadingAnchor.constraint(equalTo: $0.superview!.leadingAnchor, constant: insets.left )},
+        { $0.trailingAnchor.constraint(equalTo: $0.superview!.trailingAnchor, constant: -insets.right )}
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: Support Types
+
+public struct Dims {
+    public static let width = \UIView.widthAnchor
+    public static let height = \UIView.heightAnchor
+}
+
+public struct Ancs {
+    public static let top = \UIView.topAnchor
+    public static let bottom = \UIView.bottomAnchor
+    public static let leading = \UIView.leadingAnchor
+    public static let trailing = \UIView.trailingAnchor
+    public static let verticalCenter = \UIView.centerXAnchor
+    public static let horizontalCenter = \UIView.centerYAnchor
+    
+    public static let firstBaseline = \UIView.firstBaselineAnchor
+    public static let lastBaseline = \UIView.lastBaselineAnchor
+}
+
+extension UIView {
+    var safeLayoutGuide: UILayoutGuide {
+        if #available(iOS 11, *) {
+            return safeAreaLayoutGuide
+        } else {
+            return layoutMarginsGuide
+        }
+    }
+}
