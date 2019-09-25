@@ -27,7 +27,8 @@ public enum Dimensions {
 // MARK: Factory methods over the NSLayoutDimension methods
 // Create constraints for width and height
 
-
+/// Describes relation between dimension of two views
+/// Example: 'align(my: .height, and: .width, of: view, times: 2, plus: 3)'
 public func align(
   my dimension: Dimensions, and viewsDimension : Dimensions,
   of view: UIView,times multiplier: CGFloat = 1,
@@ -42,7 +43,13 @@ public func align(
   }
 }
 
-public func set(my dimension: Dimensions, to constant: CGFloat) -> Constraint {
+/// Describes constraint that will be equal to greater or less than a constant
+/// Examples: 'set(my: .height, to: 22)'
+/// 'set(my: .height, .greaterThanOrEqual, to: 23)'
+/// 'set(my: .height, .lessThanOrEqual, to: 23)'
+public func set(my dimension: Dimensions,
+                _ relation: NSLayoutConstraint.Relation = .equal, to constant: CGFloat)
+-> Constraint {
   return { layoutView in
     layoutView[keyPath: dimension.keyPath].constraint(equalToConstant: constant)
   }
