@@ -205,4 +205,21 @@ public func equalTo(superView view: UIView, with insets: UIEdgeInsets = .zero) -
 }
 
 
+// MARK: Support Types
 
+public struct Dims {
+  public static let width = \UIView.widthAnchor
+  public static let height = \UIView.heightAnchor
+}
+
+public struct Ancs {
+  public static let top = \UIView.topAnchor
+  public static let bottom = \UIView.bottomAnchor
+  public static let leading = \UIView.leadingAnchor
+  public static let trailing = \UIView.trailingAnchor
+  public static let verticalCenter = \UIView.centerXAnchor
+  public static let horizontalCenter = \UIView.centerYAnchor
+  
+  public static let firstBaseline = \UIView.firstBaselineAnchor
+  public static let lastBaseline = \UIView.lastBaselineAnchor
+}
