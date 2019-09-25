@@ -29,18 +29,35 @@ public enum Dimensions {
 
 /// Describes relation between dimension of two views
 /// Example: 'align(my: .height, and: .width, of: view, times: 2, plus: 3)'
-public func align(
-  my dimension: Dimensions, and viewsDimension : Dimensions,
-  of view: UIView,times multiplier: CGFloat = 1,
-  plus constant: CGFloat = 0
+public func make(
+  my dimension: Dimensions,
+  _ relation: NSLayoutConstraint.Relation ,
+  to viewsDimension : Dimensions,
+  of view: UIView,times x: CGFloat = 1,
+  plus c: CGFloat = 0
 ) -> Constraint {
   return  { layoutView in
-    layoutView[keyPath: dimension.keyPath].constraint(
-      equalTo: view[keyPath: viewsDimension.keyPath],
-      multiplier: multiplier,
-      constant: constant
-    )
+    let anc = layoutView[keyPath: dimension.keyPath]
+    let vAnc = view[keyPath: viewsDimension.keyPath]
+    switch relation {
+    case .equal:
+      return anc.constraint(equalTo: vAnc, multiplier: x, constant: c)
+    case .greaterThanOrEqual:
+      return anc.constraint(greaterThanOrEqualTo: vAnc, multiplier: x, constant: c)
+    case .lessThanOrEqual:
+      return anc.constraint(lessThanOrEqualTo: vAnc, multiplier: x, constant: c)
+    }
   }
+}
+
+public func align(
+  my dimension: Dimensions,
+  and viewsDimension : Dimensions,
+  of view: UIView,
+  times x: CGFloat = 1,
+  plus c: CGFloat = 0
+) -> Constraint {
+  return make(my: dimension, .equal, to: viewsDimension, of: view, times: x, plus: c)
 }
 
 /// Describes constraint that will be equal to greater or less than a constant
@@ -51,7 +68,15 @@ public func set(my dimension: Dimensions,
                 _ relation: NSLayoutConstraint.Relation = .equal, to constant: CGFloat)
 -> Constraint {
   return { layoutView in
-    layoutView[keyPath: dimension.keyPath].constraint(equalToConstant: constant)
+    let anchor = layoutView[keyPath: dimension.keyPath]
+    switch relation {
+    case .equal:
+      return anchor.constraint(equalToConstant: constant)
+    case .greaterThanOrEqual:
+      return anchor.constraint(greaterThanOrEqualToConstant: constant)
+    case .lessThanOrEqual:
+      return anchor.constraint(lessThanOrEqualToConstant: constant)
+    }
   }
 }
 
