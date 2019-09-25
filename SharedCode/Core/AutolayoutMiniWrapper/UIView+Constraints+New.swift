@@ -221,24 +221,32 @@ public func set(my dimension: Dimensions,
 }
 
 
-
-
 /// Pin view to its superview
 public func pinToSuper(with insets: UIEdgeInsets = UIEdgeInsets(all: 0)) -> [Constraint] {
-    return [
-        { $0.topAnchor.constraint(equalTo: $0.superview!.topAnchor, constant: insets.top )},
-        { $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor, constant: -insets.bottom )},
-        { $0.leadingAnchor.constraint(equalTo: $0.superview!.leadingAnchor, constant: insets.left )},
-        { $0.trailingAnchor.constraint(equalTo: $0.superview!.trailingAnchor, constant: -insets.right )}
-    ]
+  return [
+    { $0.topAnchor.constraint(equalTo: $0.superview!.topAnchor, constant: insets.top )},
+    { $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor, constant: -insets.bottom )},
+    { $0.leadingAnchor.constraint(equalTo: $0.superview!.leadingAnchor, constant: insets.left )},
+    { $0.trailingAnchor.constraint(equalTo: $0.superview!.trailingAnchor, constant: -insets.right )}
+  ]
+}
+
+/// Pin view to its superview's safe area
+public func pinToSuperSafeArea(with insets: UIEdgeInsets = UIEdgeInsets(all: 0)) -> [Constraint] {
+  return [
+    { $0.topAnchor.constraint(equalTo: $0.superview!.safeLayoutGuide.topAnchor, constant: insets.top )},
+    { $0.bottomAnchor.constraint(equalTo: $0.superview!.safeLayoutGuide.bottomAnchor, constant: -insets.bottom )},
+    { $0.leadingAnchor.constraint(equalTo: $0.superview!.safeLayoutGuide.leadingAnchor, constant: insets.left )},
+    { $0.trailingAnchor.constraint(equalTo: $0.superview!.safeLayoutGuide.trailingAnchor, constant: -insets.right )}
+  ]
 }
 
 extension UIView {
-    var safeLayoutGuide: UILayoutGuide {
-        if #available(iOS 11, *) {
-            return safeAreaLayoutGuide
-        } else {
-            return layoutMarginsGuide
-        }
+  var safeLayoutGuide: UILayoutGuide {
+    if #available(iOS 11, *) {
+      return safeAreaLayoutGuide
+    } else {
+      return layoutMarginsGuide
     }
+  }
 }
