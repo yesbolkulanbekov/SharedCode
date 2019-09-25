@@ -16,43 +16,7 @@ import Foundation
 //
 import UIKit
 
-public typealias Constraint = (_ layoutView: UIView) -> NSLayoutConstraint
-
-//
-// Solution based on http://chris.eidhof.nl/post/micro-autolayout-dsl/
-//
-public extension UIView {
-    
-    /// Adds constraints using NSLayoutAnchors, based on description provided in params.
-    /// Please refer to helper equal funtions for info how to generate constraints easily.
-    ///
-    /// - Parameter constraintDescriptions: constrains array
-    /// - Returns: created constraints
-    @discardableResult func addConstraints(_ constraintDescriptions: [Constraint]) -> [NSLayoutConstraint] {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = constraintDescriptions.map { $0(self) }
-        NSLayoutConstraint.activate(constraints)
-        return constraints
-    }
-    
-    @discardableResult func addConstraints(_ constraintDescriptions: Constraint...) -> [NSLayoutConstraint] {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = constraintDescriptions.map { $0(self) }
-        NSLayoutConstraint.activate(constraints)
-        return constraints
-    }
-    
-    @discardableResult func addNonActiveConstraints(_ constraintDescriptions: [Constraint]) -> [NSLayoutConstraint] {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = constraintDescriptions.map { $0(self) }
-        return constraints
-    }
-}
-
-
-
-
-
+// Based on http://chris.eidhof.nl/post/micro-autolayout-dsl/
 
 /// Describes relation between dimension of two views
 /// Example: `equal(logoImageView, \.widthAnchor, \.heightAnchor, constant: 80)`

@@ -8,6 +8,35 @@
 
 import UIKit
 
+public typealias Constraint = (_ layoutView: UIView) -> NSLayoutConstraint
+
+public extension UIView {
+  
+  @discardableResult func addConstraints(_ constraintDescriptions: [Constraint]) -> [NSLayoutConstraint] {
+    self.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = constraintDescriptions.map { $0(self) }
+    NSLayoutConstraint.activate(constraints)
+    return constraints
+  }
+  
+  @discardableResult func addConstraints(_ constraintDescriptions: Constraint...) -> [NSLayoutConstraint] {
+    self.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = constraintDescriptions.map { $0(self) }
+    NSLayoutConstraint.activate(constraints)
+    return constraints
+  }
+  
+  @discardableResult func addNonActiveConstraints(_ constraintDescriptions: [Constraint]) -> [NSLayoutConstraint] {
+    self.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = constraintDescriptions.map { $0(self) }
+    return constraints
+  }
+}
+
+
+
+
+
 // MARK: Helper types for factory methods
 
 public enum Dimensions {
@@ -65,6 +94,10 @@ public enum XEdge {
   }
   
 }
+
+
+
+
 
 // MARK: Factory methods over the NSLayoutAnchor<AnchorType> methods
 // Create constraints for X and Y anchors
