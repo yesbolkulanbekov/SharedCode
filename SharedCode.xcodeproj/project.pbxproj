@@ -48,7 +48,7 @@
 		442CE97E22846DD4008E0C93 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5C20F477C9000EE3D2 /* Command.swift */; };
 		442CE97F22846DD4008E0C93 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6A20F477C9000EE3D2 /* Style.swift */; };
 		442CE98022846DD4008E0C93 /* UIView+anchorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */; };
-		442CE98122846DD4008E0C93 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
+		442CE98122846DD4008E0C93 /* UIView+Constraints+Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints+Old.swift */; };
 		442CE98222846DD4008E0C93 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */; };
 		442CE98322846DD4008E0C93 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5E20F477C9000EE3D2 /* UITextViewPlaceholder.swift */; };
 		442CE98422846DD4008E0C93 /* UIView+bottomEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5F20F477C9000EE3D2 /* UIView+bottomEdgeView.swift */; };
@@ -72,7 +72,7 @@
 		442CE99622846DD4008E0C93 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5820F477C9000EE3D2 /* Alerts.swift */; };
 		442CE99722846DD4008E0C93 /* MonsterStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FBB5920F477C9000EE3D2 /* MonsterStepper.swift */; };
 		4468F51C21428974009B3143 /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468F51B21428973009B3143 /* GenericCell.swift */; };
-		44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */; };
+		44B5F9DC20F5BB72000DA324 /* UIView+Constraints+Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9DB20F5BB72000DA324 /* UIView+Constraints+Old.swift */; };
 		44B5FA0220F5CB5E000DA324 /* GenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FE20F5CB5E000DA324 /* GenericView.swift */; };
 		44B5FA0320F5CB5E000DA324 /* UIKit+StyleInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */; };
 		44B5FA0420F5CB5E000DA324 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5FA0020F5CB5E000DA324 /* Renderable.swift */; };
@@ -121,7 +121,7 @@
 		442CE936228466AE008E0C93 /* SharedCodeFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedCodeFramework.h; sourceTree = "<group>"; };
 		442CE937228466AE008E0C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4468F51B21428973009B3143 /* GenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
-		44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		44B5F9DB20F5BB72000DA324 /* UIView+Constraints+Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints+Old.swift"; sourceTree = "<group>"; };
 		44B5F9FE20F5CB5E000DA324 /* GenericView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericView.swift; sourceTree = "<group>"; };
 		44B5F9FF20F5CB5E000DA324 /* UIKit+StyleInits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+StyleInits.swift"; sourceTree = "<group>"; };
 		44B5FA0020F5CB5E000DA324 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				440FBB6820F477C9000EE3D2 /* UIView+anchorViews.swift */,
-				44B5F9DB20F5BB72000DA324 /* UIView+Constraints.swift */,
+				44B5F9DB20F5BB72000DA324 /* UIView+Constraints+Old.swift */,
 				441272A922B651CB00ECAD86 /* UIView+Constraints+New.swift */,
 			);
 			path = AutolayoutMiniWrapper;
@@ -446,7 +446,7 @@
 				441272AA22B651CB00ECAD86 /* UIView+Constraints+New.swift in Sources */,
 				440FBB8220F477C9000EE3D2 /* String+Components.swift in Sources */,
 				440FBB7F20F477C9000EE3D2 /* UIViewController+StoryboardLoading.swift in Sources */,
-				44B5F9DC20F5BB72000DA324 /* UIView+Constraints.swift in Sources */,
+				44B5F9DC20F5BB72000DA324 /* UIView+Constraints+Old.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +463,7 @@
 				442CE97E22846DD4008E0C93 /* Command.swift in Sources */,
 				442CE97F22846DD4008E0C93 /* Style.swift in Sources */,
 				442CE98022846DD4008E0C93 /* UIView+anchorViews.swift in Sources */,
-				442CE98122846DD4008E0C93 /* UIView+Constraints.swift in Sources */,
+				442CE98122846DD4008E0C93 /* UIView+Constraints+Old.swift in Sources */,
 				442CE98222846DD4008E0C93 /* UIKit+StyleInits.swift in Sources */,
 				442CE98322846DD4008E0C93 /* UITextViewPlaceholder.swift in Sources */,
 				442CE98422846DD4008E0C93 /* UIView+bottomEdgeView.swift in Sources */,
