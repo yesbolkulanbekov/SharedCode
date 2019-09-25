@@ -8,10 +8,53 @@
 
 import UIKit
 
+// MARK: Helper types for factory methods
+
+public enum Dimensions {
+  case width
+  case height
+  
+  var keyPath: KeyPath<UIView, NSLayoutDimension> {
+    switch self {
+    case .width:
+      return \UIView.widthAnchor
+    case .height:
+      return \UIView.heightAnchor
+    }
+  }
+}
+
+// MARK: Factory methods over the NSLayoutDimension methods
+// Create constraints for width and height
+
+
+public func align(
+  my dimension: Dimensions, and viewsDimension : Dimensions,
+  of view: UIView,times multiplier: CGFloat = 1,
+  plus constant: CGFloat = 0
+) -> Constraint {
+  return  { layoutView in
+    layoutView[keyPath: dimension.keyPath].constraint(
+      equalTo: view[keyPath: viewsDimension.keyPath],
+      multiplier: multiplier,
+      constant: constant
+    )
+  }
+}
+
+public func set(my dimension: Dimensions, to constant: CGFloat) -> Constraint {
+  return { layoutView in
+    layoutView[keyPath: dimension.keyPath].constraint(equalToConstant: constant)
+  }
+}
+
+
+
+// MARK: Old prototypes
 
 
 /// Example: `align(my: \.widthAnchor, with: \.heightAnchor, of: view)`
-public func align<Anchor>(my from: KeyPath<UIView, Anchor>,
+public func alignOld<Anchor>(my from: KeyPath<UIView, Anchor>,
                           with to : KeyPath<UIView, Anchor>,
                           of view: UIView,
                           multBy multiplier: CGFloat = 1,
