@@ -112,20 +112,16 @@ struct EmptyContentViewLayout {
 extension EmptyContentViewLayout {
     
     func addSubViews() {
-        rootView.addSubview(sv.icon)
+
         rootView.addSubview(sv.title)
         rootView.addSubview(sv.subtitle)
     }
     
     func addConstraints() {
         
-        sv.icon.addConstraints(
-            equal(rootView, Ancs.top, constant: 200),
-            equal(rootView, Ancs.verticalCenter)
-        )
 
         sv.title.addConstraints(
-            equal(sv.icon, Ancs.top, Ancs.bottom, constant: 30),
+            equal(rootView, Ancs.horizontalCenter),
             equal(rootView, Ancs.verticalCenter)
         )
         
